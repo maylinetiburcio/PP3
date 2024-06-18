@@ -23,11 +23,11 @@ fetch(url, options)
       itemDiv.className = 'food-item';
 
       itemDiv.innerHTML = `
-      <div class="card d-flex flex-column text-center fst-italic fs-6 rounded-3" style="width: 18rem; height: 400px;">
+      <div class="card d-flex flex-column text-center fst-italic rounded-3" style="width: 18rem; height: 370px;">
         <img src="${item.image}" class="card-img-top rounded-top" alt="${item.name}" style="height: 200px; object-fit: cover;">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">${item.title}</h5>
-          <p class="fs-6 mt-2">Price:$9</p>
+          <h6 class="card-title">${item.title}</h6>
+          <p class="fs-7">Price:$9</p>
           <a href="#" class="btn btn-primary mt-auto" >Add to cart</a>
         </div>
       </div>
