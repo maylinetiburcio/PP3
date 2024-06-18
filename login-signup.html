@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud's Diner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #7EA3F1;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+            
+        }
+        form {
+            display: none;
+        }
+        form.active {
+            display: block;
+        }
+        input, button {
+            display: block;
+            margin: 10px auto;
+            width: 90%;   
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #7678ed;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input {
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .toggle-form {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form id="signupForm" class="active">
+            <h2>Sign Up</h2>
+            <!-- <label for="signupName">Name:</label> -->
+            <input type="text" id="signupFirstName" placeholder="First Name" required>
+            <span class="error" id="signupFirstNameError"></span>
+
+            <input type="text" id="signupLastName" placeholder="Last Name" required>
+            <span class="error" id="signupLastNameError"></span>
+
+            <!-- <label for="signupEmail">Email:</label> -->
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <span class="error" id="signupEmailError"></span>
+
+            <input type="tel" id="signupMobile" name="mobile" placeholder="Mobile Number" required>
+            <span class="error" id="signupMobileError"></span>
+
+            <!-- <label for="signupPassword">Password:</label> -->       
+            <input type="password" id="signupPassword" placeholder="Password" required minlength="6">
+            <span class="error" id="signupPasswordError"></span>
+                                           
+            <button type="submit">Sign Up</button>
+            <div class="toggle-form" onclick="toggleForm()">Already have an account? Log in</div>
+        </form>
+
+        <form id="loginForm">
+            <h2>Login</h2>
+            <!-- <label for="loginEmail">Email:</label> -->
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <span class="error" id="loginEmailError"></span>
+
+            <!-- <label for="loginPassword">Password:</label> -->
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <span class="error" id="loginPasswordError"></span>
+
+            <button type="submit">Login</button>
+            <div class="toggle-form" onclick="toggleForm()">Don't have an account? Sign up</div>
+        </form>
+    </div>
+
+    <script src="login-signup.js"></script>
+
+</body>
+</html>
